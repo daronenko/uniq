@@ -34,17 +34,17 @@ func New(flags *args.Flags, iostream *args.IOStream) *UniqCmd {
 func (cmd *UniqCmd) Run() {
 	// `target` is the beginning of the sequence we are searching for
 	var targetLine, modifiedTargetLine string
-	var notFirstLine bool
+	var isFirstLine bool = true
 
 	scanner := bufio.NewScanner(cmd.Input)
 	for scanner.Scan() {
 		line := scanner.Text()
 		modifiedLine := cmd.Modify(line)
 
-		if !notFirstLine {
+		if isFirstLine {
 			targetLine = line
 			modifiedTargetLine = modifiedLine
-			notFirstLine = true
+			isFirstLine = false
 		}
 
 		if cmd.ShouldSave(modifiedLine) {
