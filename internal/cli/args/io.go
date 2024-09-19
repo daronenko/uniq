@@ -17,7 +17,7 @@ func NewIOStream() (*IOStream, error) {
 
 	err := arguments.parse()
 	if err != nil {
-		return nil, fmt.Errorf("cannot change iostream")
+		return nil, err
 	}
 
 	return arguments, nil
