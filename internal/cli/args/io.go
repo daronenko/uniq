@@ -37,7 +37,7 @@ func (ios *IOStream) Close() error {
 
 func closeImpl(stream interface{}) error {
 	if _, ok := stream.(io.Closer); !ok {
-		panic("`stream` does not satisfy the `io.Closer` interface")
+		return fmt.Errorf("no way to close the stream")
 	}
 
 	if err := stream.(io.Closer).Close(); err != nil {
