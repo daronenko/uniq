@@ -33,8 +33,7 @@ func New(flags *args.Flags, iostream *args.IOStream) *UniqCmd {
 
 func (cmd *UniqCmd) Run() {
 	// `target` is the beginning of the sequence we are searching for
-	var targetLine string
-	var modifiedTargetLine string
+	var targetLine, modifiedTargetLine string
 	var notFirstLine bool
 
 	scanner := bufio.NewScanner(cmd.Input)
