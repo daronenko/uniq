@@ -53,6 +53,7 @@ func (cmd *UniqCmd) Run() {
 
 		if modifiedLine != modifiedTargetLine {
 			targetLine = line
+			modifiedTargetLine = modifiedLine
 		}
 	}
 
