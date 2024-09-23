@@ -19,6 +19,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("iostream error: %v\n", err)
 	}
+	defer iostream.Close()
 
 	cmd := cli.New(flags, iostream)
 	cmd.Run()
