@@ -1,0 +1,7 @@
+	github.com/daronenko/uniq/cmd		coverage: 0.0% of statements
+	github.com/daronenko/uniq/internal/cli/args		coverage: 0.0% of statements
+	github.com/daronenko/uniq/pkg/uniq		coverage: 0.0% of statements
+ok  	github.com/daronenko/uniq/internal/cli	0.329s	coverage: 50.0% of statements
+ok  	github.com/daronenko/uniq/internal/cli/format	0.588s	coverage: 100.0% of statements
+ok  	github.com/daronenko/uniq/pkg/uniq/modifier	0.845s	coverage: 95.0% of statements
+ok  	github.com/daronenko/uniq/pkg/uniq/uniqer	1.104s	coverage: 97.5% of statements
